@@ -1,0 +1,154 @@
+@font-face {
+    font-family: museoSans;
+    src: url(MuseoSans.otf);
+}
+
+header {
+    border-top: 7px solid #4D08E5;
+    height: 200px;
+    width: 100%;
+}
+
+body {
+    font: 12px museoSans, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #00B7FF;
+}
+
+
+
+.main-logo {
+    margin-top: 100px;
+    width: 300px;
+    height: auto;
+}
+
+.loo-button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.toilet {
+    float: left;
+    padding: 20px;
+    border: 4px solid #4D08E5;
+    border-radius: 15%;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+}
+
+.circle-background {
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.toilet-icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    height: 40px;
+     width: auto;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.gender-change-button {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.close-button {
+    margin-top: 20px;
+    height: 50px;
+    width: auto;
+    float: right;
+}
+
+.map-full {
+    width: 100%;
+    height: auto;
+}
+
+.loading-screen {
+    margin-top: 200px;
+}
+
+.info-page-img {
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.add-hover {
+    opacity: 0;
+}
+
+.add-hover:hover {
+    opacity: 0.8;
+}
+
+.add-icon {
+    position: relative;
+    top: -210px;
+    left:  0;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.toilet-container {
+    margin-left: 35px;
+}
+
+
+.status-yellow {
+    border-color: #FBBC3E;
+}
+
+.status-red {
+    border-color: #EA5733;
+}
+
+.status-green {
+    border-color: #00BC82;
+}
+
+.background-yellow {
+    background-color: #FBBC3E;
+}
+
+.background-red {
+    background-color: #EA5733;
+}
+
+.background-green {
+    background-color: #00BC82;
+}
+
+.color-yellow {
+    color: #FBBC3E;
+}
+
+.color-red {
+    color: #EA5733;
+}
+
+.color-green {
+    color: #00BC82;
+}

@@ -1,0 +1,42 @@
+<div>
+
+    <!--<pre>{{toiletData}}</pre>-->
+    <div class="container">
+        <div class="row">
+            <img title="Refresh" class="nav-icon reflush-button loo-button" src="../images/reflush.png" ng-click="resetReflush()">
+            <a href="#/map" title="Map"><img class="nav-icon map-button loo-button" src="../images/mapButton.png"></a>
+            <a href="#/info" title="How to use"><img class="nav-icon info-button loo-button" src="../images/infoButton.png"></a>
+            <a href="#/gender" ng-if="user.gender == 'female'" title="Change gender"><img class="nav-icon gender-button loo-button" src="../images/genderFemaleNav.png"></a>
+            <a href="#/gender" ng-if="user.gender == 'male'" title="Change gender"><img class="nav-icon gender-button loo-button" src="../images/genderMaleNav.png"></a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="toilet-container center-block">
+            <div class="loading-screen" ng-show="!toiletData"><h2>Loading...</h2></div>
+            <div class="toilet status-{{toilet.status}} center-block" ng-repeat="toilet in toiletData | filter:genderFilter">
+                <div class=""></div>
+                <div class="circle-background background-{{toilet.status}}">
+                    <img class="toilet-icon" ng-src="http://loome.awesomeads.co.nz/{{toilet.icon_url}}">
+                </div>
+
+                <div ng-if="user.subscribedToilets.indexOf(toilet.id) < 0">
+                    <h2 class="color-{{toilet.status}}">{{toilet.name}}</h2>
+                    <h5>{{toilet.location}}</h5>
+                    <h4>Lurking: {{toilet.queue_length}}</h4>
+                    <img class="add-icon add-hover status-{{toilet.status}}" ng-src="../images/add-{{toilet.status}}.png" ng-click="joinQueue(toilet.id)">
+                </div>
+
+                <div ng-if="user.subscribedToilets.indexOf(toilet.id) > -1">
+                    <h2 class="color-{{toilet.status}}">{{toilet.name}}</h2>
+                    <h5>{{toilet.location}}</h5>
+                    <h4>You: #{{toilet.queue_length}} lurker</h4>
+                    <img class="add-icon add-hover status-{{toilet.status}}" ng-src="../images/remove-{{toilet.status}}.png" ng-click="leaveQueue(toilet.id)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
